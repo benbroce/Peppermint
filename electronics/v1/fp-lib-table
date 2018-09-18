@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name CapSense)(type KiCad)(uri ${KIPRJMOD}/CapSense.pretty)(options "")(descr ""))
   (lib (name BattHolder)(type KiCad)(uri ${KIPRJMOD}/BattHolder.pretty)(options "")(descr ""))
+  (lib (name CrystalSMD)(type KiCad)(uri ${KIPRJMOD}/CrystalSMD.pretty)(options "")(descr ""))
 )
