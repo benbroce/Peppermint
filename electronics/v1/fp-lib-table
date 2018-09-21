@@ -3,4 +3,5 @@
   (lib (name BattHolder)(type KiCad)(uri ${KIPRJMOD}/BattHolder.pretty)(options "")(descr ""))
   (lib (name CrystalSMD)(type KiCad)(uri ${KIPRJMOD}/CrystalSMD.pretty)(options "")(descr ""))
   (lib (name AT42QT1010)(type KiCad)(uri ${KIPRJMOD}/AT42QT1010.pretty)(options "")(descr ""))
+  (lib (name ISP_Connector)(type KiCad)(uri ${KIPRJMOD}/ISP_Connector.pretty)(options "")(descr ""))
 )

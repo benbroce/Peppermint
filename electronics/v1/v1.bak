@@ -378,9 +378,6 @@ Wire Wire Line
 	9600 1550 10100 1550
 Connection ~ 9600 1550
 Wire Wire Line
-	10100 1550 10450 1550
-Connection ~ 10100 1550
-Wire Wire Line
 	8200 2150 8600 2150
 Wire Wire Line
 	8600 2150 9100 2150
@@ -513,7 +510,6 @@ Wire Wire Line
 Connection ~ 9950 2150
 Wire Wire Line
 	9950 2150 10100 2150
-Connection ~ 10450 1550
 Wire Wire Line
 	10100 1850 10250 1850
 Connection ~ 10250 1850
@@ -554,8 +550,6 @@ Wire Wire Line
 	10100 2450 10450 2450
 Connection ~ 10450 2450
 Wire Wire Line
-	10450 2450 10450 1550
-Wire Wire Line
 	10100 3050 10450 3050
 Connection ~ 10450 3050
 Wire Wire Line
@@ -565,11 +559,6 @@ Wire Wire Line
 Connection ~ 10450 3650
 Wire Wire Line
 	10450 3650 10450 3050
-Wire Wire Line
-	10450 950  10100 950 
-Wire Wire Line
-	10450 950  10450 1550
-Connection ~ 10100 950 
 Text GLabel 7900 3350 0    50   3State ~ 0
 CP5
 Text GLabel 7900 3950 0    50   3State ~ 0
@@ -1083,7 +1072,7 @@ U 1 1 5BA062C9
 P 5150 2050
 F 0 "J1" H 4870 2146 50  0000 R CNN
 F 1 "AVR-ISP-6" H 4870 2055 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" V 4900 2100 50  0001 C CNN
+F 2 "ISP_Connector:SIP-6_AVR_ISP" V 4900 2100 50  0001 C CNN
 F 3 " ~" H 3875 1500 50  0001 C CNN
 	1    5150 2050
 	1    0    0    -1  
@@ -1211,4 +1200,9 @@ Wire Wire Line
 Connection ~ 1700 4150
 Wire Wire Line
 	1700 4150 1700 4200
+Wire Wire Line
+	10450 2450 10450 1550
+Connection ~ 10100 1550
+Wire Wire Line
+	10100 1550 10450 1550
 $EndSCHEMATC

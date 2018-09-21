@@ -1072,7 +1072,7 @@ U 1 1 5BA062C9
 P 5150 2050
 F 0 "J1" H 4870 2146 50  0000 R CNN
 F 1 "AVR-ISP-6" H 4870 2055 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" V 4900 2100 50  0001 C CNN
+F 2 "ISP_Connector:SIP-6_AVR_ISP" V 4900 2100 50  0001 C CNN
 F 3 " ~" H 3875 1500 50  0001 C CNN
 	1    5150 2050
 	1    0    0    -1  
@@ -1205,4 +1205,8 @@ Wire Wire Line
 Connection ~ 10100 1550
 Wire Wire Line
 	10100 1550 10450 1550
+Text Notes 3000 2100 0    50   ~ 0
+Crystal Value May Change to
+Text Notes 3000 2200 0    50   ~ 0
+32KHz Watch for Timekeeping
 $EndSCHEMATC
