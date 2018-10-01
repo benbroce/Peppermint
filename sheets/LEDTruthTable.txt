@@ -1,0 +1,11 @@
+Only light 1 at a time. All pins not actively
+driving the single LED should be set to High-Z.
+
+                       HIGH
+      |    0	1     2     3     4     5
+   ----------------------------------------
+   1  |               11    15    19    23
+L  2  |    3    7           14    18    22
+O  3  |    2    6     10          17    21
+W  4  |    1    5     9     13          20
+   5  |    0    4     8     12    16
