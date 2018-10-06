@@ -2,13 +2,15 @@
 
 #include "Charlieplex.h"
 
+// Constructs a charlieplexed matrix
 Charlieplex::Charlieplex(byte* userPins, byte numberOfUserPins) {
 	pins = userPins;
 	numberOfPins = numberOfUserPins;
 	clear();
 }
 
-void Charlieplex::write(charliePin pin, bool state) {
+// Turns a specific LED on or off
+void Charlieplex::write(charlieLED pin, bool state) {
 	if (state) {
 		setHigh(pin.vcc);
 		setLow(pin.gnd);
@@ -18,7 +20,8 @@ void Charlieplex::write(charliePin pin, bool state) {
 	}
 }
 
-void Charlieplex::writePwm(charliePin pin, byte dutyCycle) {
+// Pulses a specific LED at a given duty cycle
+void Charlieplex::writePwm(charlieLED pin, byte dutyCycle) {
 	if (dutyCycle) {
 		setPwm(pin.vcc, dutyCycle);
 		setLow(pin.gnd);
@@ -28,32 +31,33 @@ void Charlieplex::writePwm(charliePin pin, byte dutyCycle) {
 	}
 }
 
-//set a pin HIGH
+// Set all to High-Z
+void Charlieplex::clear() {
+	for (byte i = 0; i < numberOfPins; i++) {
+		setZ(i);
+	}
+}
+
+// Set a pin HIGH
 void Charlieplex::setHigh(byte pin) {
 	pinMode(pins[pin], OUTPUT);
 	digitalWrite(pins[pin], HIGH);
 }
 
+// Pulse a pin w/ PWM
 void Charlieplex::setPwm(byte pin, byte dutyCycle) {
 	pinMode(pins[pin], OUTPUT);
 	analogWrite(pins[pin], dutyCycle);
 }
 
-//set a pin LOW
+// Set a pin LOW
 void Charlieplex::setLow(byte pin) {
 	pinMode(pins[pin], OUTPUT);
 	digitalWrite(pins[pin], LOW);
 }
 
-//set a pin to High-Z
+// Set a pin to High-Z (set to INPUT w/o pullup)
 void Charlieplex::setZ(byte pin) {
 	pinMode(pins[pin], INPUT);
 	digitalWrite(pins[pin], LOW);
-}
-
-//set all as input
-void Charlieplex::clear() {
-	for (byte i = 0; i < numberOfPins; i++) {
-		setZ(i);
-	}
 }

@@ -5,18 +5,18 @@
 
 #include <Arduino.h>
 
-struct CharliePin {
+// Stores the matrix pair used to control a single LED
+struct CharlieLED {
 	byte vcc;
 	byte gnd;
 };
-
-typedef CharliePin charliePin;
+typedef CharlieLED charlieLED;
 
 class Charlieplex {
 public:
 	Charlieplex(byte* userPins, byte numberOfUserPins);
-	void write(charliePin pin, bool state);
-	void writePwm(charliePin pin, byte dutyCycle);
+	void write(charlieLED pin, bool state);
+	void writePwm(charlieLED pin, byte dutyCycle);
 	void clear();
 
 private:
