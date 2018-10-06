@@ -1,0 +1,7 @@
+(fp_lib_table
+  (lib (name CapSense)(type KiCad)(uri ${KIPRJMOD}/footprints/CapSense.pretty)(options "")(descr ""))
+  (lib (name BattHolder)(type KiCad)(uri ${KIPRJMOD}/footprints/BattHolder.pretty)(options "")(descr ""))
+  (lib (name CrystalSMD)(type KiCad)(uri ${KIPRJMOD}/footprints/CrystalSMD.pretty)(options "")(descr ""))
+  (lib (name AT42QT1010)(type KiCad)(uri ${KIPRJMOD}/footprints/AT42QT1010.pretty)(options "")(descr ""))
+  (lib (name ISP_Connector)(type KiCad)(uri ${KIPRJMOD}/footprints/ISP_Connector.pretty)(options "")(descr ""))
+)
